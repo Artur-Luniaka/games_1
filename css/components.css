@@ -314,6 +314,8 @@
   overflow: hidden;
   transition: all var(--transition-normal);
   border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
 }
 
 .game-card:hover {
@@ -354,6 +356,9 @@
 
 .game-content {
   padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .game-title {
@@ -397,6 +402,7 @@
 .game-actions {
   display: flex;
   gap: var(--spacing-sm);
+  margin-top: auto;
 }
 
 .add-to-cart-btn {
@@ -484,9 +490,13 @@
 /* Games Grid */
 .games-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-xl);
-  margin-bottom: var(--spacing-2xl);
+}
+
+/* Featured Games Grid */
+.featured-games .games-grid {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 /* Reviews Grid */
@@ -746,6 +756,18 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1280px) {
+  .games-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  .featured-games .games-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+  }
+}
+
 @media (max-width: 768px) {
   .nav-menu {
     display: none;
@@ -765,7 +787,7 @@
   }
 
   .logo {
-    font-size: 14px;
+    font-size: 16px;
     max-width: none;
     overflow: visible;
     text-overflow: clip;
@@ -829,8 +851,11 @@
   }
 
   .games-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: var(--spacing-lg);
+    grid-template-columns: 1fr;
+  }
+
+  .featured-games .games-grid {
+    grid-template-columns: 1fr;
   }
 
   .reviews-grid {
@@ -872,6 +897,18 @@
 
   .newsletter-form {
     flex-direction: column;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+  }
+
+  .pagination-info {
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: var(--spacing-sm);
   }
 }
 
@@ -939,6 +976,28 @@
 
   .footer-content {
     padding: var(--spacing-lg) var(--spacing-sm) var(--spacing-md);
+  }
+
+  .games-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-games .games-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pagination {
+    gap: var(--spacing-xs);
+  }
+
+  .pagination-btn {
+    width: 40px;
+    height: 40px;
+    font-size: var(--font-size-sm);
+  }
+
+  .pagination-info {
+    font-size: var(--font-size-xs);
   }
 }
 
@@ -1015,6 +1074,20 @@
 
   .footer-content {
     padding: var(--spacing-md) var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .pagination {
+    gap: var(--spacing-xs);
+  }
+
+  .pagination-btn {
+    width: 36px;
+    height: 36px;
+    font-size: var(--font-size-xs);
+  }
+
+  .pagination-info {
+    font-size: var(--font-size-xs);
   }
 }
 

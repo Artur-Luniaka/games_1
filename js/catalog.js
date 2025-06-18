@@ -4,7 +4,7 @@ let allGames = [];
 let filteredGames = [];
 let genres = new Set();
 let currentPage = 1;
-const pageSize = 12;
+const pageSize = 9;
 
 // DOM
 const grid = document.getElementById("catalog-games-grid");
@@ -130,18 +130,48 @@ function renderPage(page) {
 function renderPagination() {
   const total = Math.ceil(filteredGames.length / pageSize);
   if (total <= 1) return (pagination.innerHTML = "");
+
   let html = "";
+
+  // Информация о страницах
+  html += `<div class="pagination-info">Page ${currentPage} of ${total}</div>`;
+
+  // Кнопка "Предыдущая"
+  if (currentPage > 1) {
+    html += `<button class="pagination-btn" onclick="goToPage(${
+      currentPage - 1
+    })">‹</button>`;
+  } else {
+    html += `<button class="pagination-btn" disabled>‹</button>`;
+  }
+
+  // Номера страниц
   for (let i = 1; i <= total; i++) {
     html += `<button class="pagination-btn${
       i === currentPage ? " active" : ""
     }" onclick="goToPage(${i})">${i}</button>`;
   }
+
+  // Кнопка "Следующая"
+  if (currentPage < total) {
+    html += `<button class="pagination-btn" onclick="goToPage(${
+      currentPage + 1
+    })">›</button>`;
+  } else {
+    html += `<button class="pagination-btn" disabled>›</button>`;
+  }
+
   pagination.innerHTML = html;
 }
 
 window.goToPage = function (page) {
   renderPage(page);
   renderPagination();
+  // Скролл вверх при нажатии на кнопку пагинации
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 };
 
 function clearFilters() {

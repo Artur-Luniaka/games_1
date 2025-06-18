@@ -331,6 +331,63 @@
   .order-item-price {
     align-self: flex-end;
   }
+
+  /* Чекбоксы на мобильных */
+  .checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    line-height: 1.6;
+    font-size: var(--font-size-sm);
+    flex-wrap: nowrap;
+  }
+
+  .checkbox-label .checkmark {
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+
+  .checkbox-label span:not(.checkmark) {
+    flex: 1;
+    min-width: 0;
+    white-space: normal;
+  }
+
+  /* Ссылки в чекбоксах на мобильных */
+  .checkbox-label a {
+    word-break: break-word;
+    hyphens: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkbox-label {
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
+    gap: var(--spacing-sm);
+    flex-wrap: nowrap;
+  }
+
+  .checkbox-label .checkmark {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  .checkbox-label span:not(.checkmark) {
+    flex: 1;
+    min-width: 0;
+    white-space: normal;
+  }
+
+  .checkbox-label input[type="checkbox"]:checked + .checkmark::after {
+    font-size: 10px;
+  }
+
+  .checkbox-label a {
+    font-size: var(--font-size-sm);
+  }
 }
 
 @media (max-width: 360px) {
@@ -349,5 +406,33 @@
   .order-item-image {
     width: 50px;
     height: 35px;
+  }
+
+  .checkbox-label {
+    font-size: var(--font-size-xs);
+    line-height: 1.4;
+    gap: var(--spacing-sm);
+    flex-wrap: nowrap;
+  }
+
+  .checkbox-label .checkmark {
+    width: 16px;
+    height: 16px;
+    margin-top: 1px;
+    flex-shrink: 0;
+  }
+
+  .checkbox-label span:not(.checkmark) {
+    flex: 1;
+    min-width: 0;
+    white-space: normal;
+  }
+
+  .checkbox-label input[type="checkbox"]:checked + .checkmark::after {
+    font-size: 9px;
+  }
+
+  .checkbox-label a {
+    font-size: var(--font-size-xs);
   }
 }
