@@ -517,7 +517,6 @@ textarea::placeholder {
 /* Responsive Hero */
 @media (max-width: 768px) {
   .hero {
-    height: 70vh;
     min-height: 500px;
     padding: 40px 0;
   }
@@ -571,7 +570,6 @@ textarea::placeholder {
 
 @media (max-width: 480px) {
   .hero {
-    height: 60vh;
     min-height: 400px;
     padding: 40px 0;
   }
