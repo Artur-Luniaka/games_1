@@ -62,16 +62,59 @@ function handleCheckout(e) {
     form.email.focus();
     return;
   }
+
   // Save order to localStorage (simulate)
   localStorage.setItem(
     "order",
     JSON.stringify(Object.fromEntries(new FormData(form)))
   );
   localStorage.removeItem("cart");
-  showToast("Order placed successfully!");
-  setTimeout(() => {
-    window.location.href = "./";
-  }, 2000);
+
+  // Show success notification with countdown
+  showSuccessNotification();
+}
+
+function showSuccessNotification() {
+  // Replace the entire checkout content with success notification
+  const checkoutContent = document.querySelector(".checkout-content");
+
+  // Create success notification
+  const successHTML = `
+    <div class="success-notification">
+      <div class="success-content">
+        <div class="success-icon">✅</div>
+        <h2>Thank You for Your Order!</h2>
+        <p>We have received your order and will contact you shortly to complete the payment process.</p>
+        <p>You will be redirected to the homepage in <span id="countdown">10</span> seconds.</p>
+        <div class="countdown-bar">
+          <div class="countdown-progress" id="countdown-progress"></div>
+        </div>
+        <a href="./" class="btn btn-primary">Go to Homepage Now</a>
+      </div>
+    </div>
+  `;
+
+  // Replace the entire checkout content
+  checkoutContent.innerHTML = successHTML;
+
+  // Start countdown
+  let countdown = 10;
+  const countdownElement = document.getElementById("countdown");
+  const progressElement = document.getElementById("countdown-progress");
+
+  const countdownInterval = setInterval(() => {
+    countdown--;
+    if (countdownElement) countdownElement.textContent = countdown;
+    if (progressElement) {
+      const progress = ((10 - countdown) / 10) * 100;
+      progressElement.style.width = progress + "%";
+    }
+
+    if (countdown <= 0) {
+      clearInterval(countdownInterval);
+      window.location.href = "./";
+    }
+  }, 1000);
 }
 
 function validateEmail(email) {

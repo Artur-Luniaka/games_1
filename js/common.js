@@ -68,12 +68,13 @@ function injectFooter() {
           </div>
           <div class="footer-section footer-section-right">
             <h3>Customer Service</h3>
-            <a href="contact.html">Contact Us</a><br />
+            <a href="shipping.html">Shipping & Delivery</a><br />
+            <a href="returns.html">Returns & Refunds</a><br />
             <a href="privacy.html">Privacy Policy</a><br />
             <a href="terms.html">Terms of Service</a>
           </div>
         </div>
-        <div class="footer-bottom">&copy; ${year} VirtuPlayMartZone | All rights reserved.</div>
+        <div class="footer-bottom">&copy; ${year} VirtuPlayMartZone.com | All rights reserved.</div>
       </div>
     </footer>
   `;

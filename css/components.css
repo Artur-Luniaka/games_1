@@ -721,7 +721,7 @@
 .newsletter-form input {
   flex: 1;
   background-color: white;
-  color: var(--text-primary);
+  color: var(--text-muted);
   border: none;
 }
 

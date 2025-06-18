@@ -420,6 +420,7 @@ textarea::placeholder {
   z-index: 2;
   position: relative;
   text-align: center;
+  padding: 0 var(--spacing-md);
 }
 
 .hero-content h1 {
