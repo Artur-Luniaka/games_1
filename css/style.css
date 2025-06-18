@@ -385,12 +385,14 @@ textarea::placeholder {
     var(--bg-secondary) 100%
   );
   overflow: hidden;
+  padding: 60px 0;
 }
 
 .hero-slider {
   position: relative;
   width: 100%;
   height: 100%;
+  padding: 0 var(--spacing-lg);
 }
 
 .slide {
@@ -405,7 +407,7 @@ textarea::placeholder {
   flex-direction: column;
   opacity: 0;
   transition: opacity var(--transition-slow);
-  padding: 40px var(--spacing-lg);
+  padding: 40px 0;
 }
 
 .slide.active {
@@ -459,9 +461,11 @@ textarea::placeholder {
 .hero-image {
   flex: 1;
   max-width: 500px;
-  height: 400px;
+  width: 500px;
+  height: 290px;
   position: relative;
   z-index: 1;
+  margin-top: 20px;
 }
 
 .hero-image img {
@@ -475,14 +479,15 @@ textarea::placeholder {
 /* Slider Controls */
 .slider-controls {
   position: absolute;
-  bottom: 50%;
+  top: 50%;
   left: 0;
   right: 0;
   display: flex;
   justify-content: space-between;
-  padding: 0 var(--spacing-lg);
+  padding: 0 var(--spacing-xl);
   z-index: 3;
   pointer-events: none;
+  transform: translateY(-50%);
 }
 
 .slider-btn {
@@ -506,28 +511,7 @@ textarea::placeholder {
 
 /* Slider Dots */
 .slider-dots {
-  position: absolute;
-  bottom: var(--spacing-xl);
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: var(--spacing-sm);
-  z-index: 3;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.3);
-  cursor: pointer;
-  transition: all var(--transition-fast);
-}
-
-.dot.active,
-.dot:hover {
-  background-color: var(--primary-color);
-  transform: scale(1.2);
+  display: none;
 }
 
 /* Responsive Hero */
@@ -535,12 +519,17 @@ textarea::placeholder {
   .hero {
     height: 70vh;
     min-height: 500px;
+    padding: 40px 0;
+  }
+
+  .hero-slider {
+    padding: 0 var(--spacing-md);
   }
 
   .slide {
     flex-direction: column;
     text-align: center;
-    padding: var(--spacing-lg);
+    padding: var(--spacing-lg) 0;
     gap: var(--spacing-lg);
   }
 
@@ -570,7 +559,7 @@ textarea::placeholder {
   }
 
   .slider-controls {
-    bottom: 20%;
+    display: none;
   }
 
   .slider-btn {
@@ -584,6 +573,11 @@ textarea::placeholder {
   .hero {
     height: 60vh;
     min-height: 400px;
+    padding: 40px 0;
+  }
+
+  .hero-slider {
+    padding: 0 var(--spacing-sm);
   }
 
   .hero-content h1 {
@@ -600,7 +594,8 @@ textarea::placeholder {
   }
 
   .hero-buttons .btn {
-    font-size: 14px;
+    width: 100%;
+    max-width: 200px;
   }
 
   .hero-image {
@@ -608,7 +603,7 @@ textarea::placeholder {
   }
 
   .slider-controls {
-    bottom: 15%;
+    padding: 0 var(--spacing-md);
   }
 
   .slider-btn {
@@ -620,5 +615,87 @@ textarea::placeholder {
   .dot {
     width: 10px;
     height: 10px;
+  }
+}
+
+/* Cookie Banner */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+  z-index: 1000;
+  transform: translateY(100%);
+  transition: transform var(--transition-normal);
+}
+
+.cookie-banner.show {
+  transform: translateY(0);
+}
+
+.cookie-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-xl);
+}
+
+.cookie-text h3 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.cookie-text p {
+  color: var(--text-secondary);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.cookie-actions {
+  flex-shrink: 0;
+}
+
+.cookie-actions .btn {
+  min-width: 100px;
+  height: 40px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+/* Responsive Cookie Banner */
+@media (max-width: 768px) {
+  .cookie-content {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .cookie-text h3 {
+    font-size: var(--font-size-base);
+  }
+
+  .cookie-text p {
+    font-size: var(--font-size-sm);
+  }
+
+  .cookie-actions .btn {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cookie-content {
+    padding: var(--spacing-md);
   }
 }

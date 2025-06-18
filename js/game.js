@@ -3,6 +3,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   loadGameDetails();
   setupTabs();
+  setupReviewForm();
 });
 
 async function loadGameDetails() {
@@ -120,6 +121,42 @@ function setupTabs() {
       document.getElementById(btn.dataset.tab + "-tab").classList.add("active");
     })
   );
+}
+
+function setupReviewForm() {
+  const reviewForm = document.getElementById("review-form");
+  if (!reviewForm) return;
+
+  reviewForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Get form data
+    const formData = new FormData(this);
+    const rating = formData.get("rating");
+    const title = formData.get("title");
+    const text = formData.get("text");
+
+    // Validate form
+    if (!rating || !title || !text) {
+      showToast("Please fill in all fields", "error");
+      return;
+    }
+
+    // Replace form with success message
+    const reviewFormContainer = document.querySelector(".review-form");
+    reviewFormContainer.innerHTML = `
+      <div class="review-success">
+        <h4>Thank you for your review!</h4>
+        <p>Your comment is under review by the administrator and will be published soon.</p>
+      </div>
+    `;
+
+    // Show toast notification
+    showToast("Review submitted successfully!");
+
+    // Reset form (in case user wants to submit another review)
+    this.reset();
+  });
 }
 
 function addToCart(gameId) {

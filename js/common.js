@@ -94,14 +94,12 @@ function setupBurgerMenu() {
     e.preventDefault();
     e.stopPropagation();
     mobileMenu.classList.add("active");
-    console.log("Burger menu opened");
   });
 
   closeBtn.addEventListener("click", (e) => {
     e.preventDefault();
     e.stopPropagation();
     mobileMenu.classList.remove("active");
-    console.log("Burger menu closed");
   });
 
   // Close on outside click
@@ -112,7 +110,6 @@ function setupBurgerMenu() {
       e.target !== burger
     ) {
       mobileMenu.classList.remove("active");
-      console.log("Burger menu closed by outside click");
     }
   });
 
@@ -120,11 +117,8 @@ function setupBurgerMenu() {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && mobileMenu.classList.contains("active")) {
       mobileMenu.classList.remove("active");
-      console.log("Burger menu closed by escape key");
     }
   });
-
-  console.log("Burger menu setup complete");
 }
 
 function updateCartBadge() {
