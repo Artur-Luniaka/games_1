@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GameStore - Premium Xbox & PC Games | Australia</title>
+    <meta
+      name="description"
+      content="Discover the latest Xbox and PC games at GameStore. Premium gaming experience with competitive prices and fast delivery across Australia."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-slider">
+          <div class="slide active">
+            <div class="hero-content">
+              <h1>Next-Gen Gaming Starts Here</h1>
+              <p>
+                Discover the latest Xbox Series X|S and PC games with exclusive
+                deals and fast delivery across Australia
+              </p>
+              <div class="hero-buttons">
+                <a href="catalog.html" class="btn btn-primary">Shop Now</a>
+                <a href="#featured" class="btn btn-secondary">View Featured</a>
+              </div>
+            </div>
+            <div class="hero-image">
+              <img src="images/hero-game-1.jpg" alt="Latest Xbox Games" />
+            </div>
+          </div>
+          <div class="slide">
+            <div class="hero-content">
+              <h1>PC Gaming Excellence</h1>
+              <p>
+                From indie gems to AAA blockbusters - your perfect PC gaming
+                experience awaits
+              </p>
+              <div class="hero-buttons">
+                <a href="catalog.html?platform=pc" class="btn btn-primary"
+                  >PC Games</a
+                >
+                <a href="#featured" class="btn btn-secondary">View Featured</a>
+              </div>
+            </div>
+            <div class="hero-image">
+              <img src="images/hero-game-2.jpg" alt="PC Gaming" />
+            </div>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn prev" onclick="changeSlide(-1)">‹</button>
+          <button class="slider-btn next" onclick="changeSlide(1)">›</button>
+        </div>
+        <div class="slider-dots">
+          <span class="dot active" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+      </section>
+
+      <!-- Featured Games Section -->
+      <section id="featured" class="featured-games">
+        <div class="container">
+          <div class="section-header">
+            <h2>Featured Games</h2>
+            <p>Handpicked titles you won't want to miss</p>
+          </div>
+          <div class="games-grid" id="featured-games-grid">
+            <!-- Games will be loaded dynamically -->
+          </div>
+          <div class="section-footer">
+            <a href="catalog.html" class="btn btn-outline">View All Games</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gaming Categories Section -->
+      <section id="categories" class="gaming-categories">
+        <div class="container">
+          <div class="section-header">
+            <h2>Explore Gaming Categories</h2>
+            <p>Find your perfect game across all genres and platforms</p>
+          </div>
+          <div class="categories-grid">
+            <div class="category-card">
+              <div class="category-icon">🎯</div>
+              <h3>Action & Adventure</h3>
+              <p>
+                Epic battles, thrilling quests, and unforgettable adventures
+                await in our action-packed collection.
+              </p>
+              <a href="catalog.html?genre=Action" class="btn btn-outline"
+                >Explore Action</a
+              >
+            </div>
+            <div class="category-card">
+              <div class="category-icon">🏆</div>
+              <h3>RPG & Strategy</h3>
+              <p>
+                Immerse yourself in rich storytelling and strategic gameplay
+                with our RPG collection.
+              </p>
+              <a href="catalog.html?genre=RPG" class="btn btn-outline"
+                >Explore RPG</a
+              >
+            </div>
+            <div class="category-card">
+              <div class="category-icon">🏎️</div>
+              <h3>Racing & Sports</h3>
+              <p>
+                Feel the speed and competition with our premium racing and
+                sports titles.
+              </p>
+              <a href="catalog.html?genre=Racing" class="btn btn-outline"
+                >Explore Racing</a
+              >
+            </div>
+            <div class="category-card">
+              <div class="category-icon">🎮</div>
+              <h3>Shooter Games</h3>
+              <p>
+                Test your skills in intense multiplayer battles and gripping
+                single-player campaigns.
+              </p>
+              <a href="catalog.html?genre=Shooter" class="btn btn-outline"
+                >Explore Shooters</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest Releases Section -->
+      <section class="latest-releases">
+        <div class="container">
+          <div class="section-header">
+            <h2>Latest Releases</h2>
+            <p>Stay ahead with the newest games hitting the market</p>
+          </div>
+          <div class="releases-showcase">
+            <div class="release-hero">
+              <div class="release-content">
+                <h3>New This Month</h3>
+                <p>
+                  Discover the hottest new releases and pre-order upcoming
+                  blockbusters
+                </p>
+                <a href="catalog.html?sort=newest" class="btn btn-primary"
+                  >View Latest</a
+                >
+              </div>
+              <div class="release-image">
+                <img
+                  src="images/latest-releases.jpg"
+                  alt="Latest Game Releases"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gaming Community Section -->
+      <section id="community" class="gaming-community">
+        <div class="container">
+          <div class="community-content">
+            <div class="community-text">
+              <h2>Join the Gaming Community</h2>
+              <p>
+                Connect with fellow gamers, share your experiences, and discover
+                new titles through our vibrant community.
+              </p>
+              <ul class="community-features">
+                <li>🎮 Weekly gaming events and tournaments</li>
+                <li>💬 Active community forums and discussions</li>
+                <li>🏆 Exclusive member rewards and discounts</li>
+                <li>📱 Stay updated with gaming news and reviews</li>
+              </ul>
+              <a href="contact.html" class="btn btn-primary">Join Community</a>
+            </div>
+            <div class="community-image">
+              <img src="images/gaming-community.jpg" alt="Gaming Community" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews Section -->
+      <section class="reviews-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>What Our Customers Say</h2>
+            <p>Real reviews from real gamers</p>
+          </div>
+          <div class="reviews-grid" id="reviews-grid">
+            <!-- Reviews will be loaded dynamically -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="features-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Why Choose GameStore?</h2>
+            <p>Your trusted gaming partner in Australia</p>
+          </div>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🚚</div>
+              <h3>Fast Delivery</h3>
+              <p>
+                Free shipping on orders over $50. Same-day dispatch for digital
+                codes.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🛡️</div>
+              <h3>Secure Shopping</h3>
+              <p>
+                100% secure payment processing with buyer protection on all
+                purchases.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🎮</div>
+              <h3>Gaming Experts</h3>
+              <p>
+                Our team of gaming enthusiasts is here to help you find the
+                perfect game.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">💰</div>
+              <h3>Best Prices</h3>
+              <p>
+                Competitive pricing with regular sales and exclusive deals for
+                our customers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter Section -->
+      <section class="newsletter-section">
+        <div class="container">
+          <div class="newsletter-content">
+            <h2>Stay Updated</h2>
+            <p>
+              Get notified about new releases, exclusive deals, and gaming news
+            </p>
+            <form class="newsletter-form" id="newsletter-form">
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast"></div>
+
+    <script src="js/common.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>

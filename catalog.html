@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Catalog - Xbox & PC Games | GameStore</title>
+    <meta
+      name="description"
+      content="Browse our extensive collection of Xbox and PC games. Filter by platform, genre, price and more."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/catalog.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main>
+      <section class="catalog-hero">
+        <div class="container">
+          <h1>Game Catalog</h1>
+          <p>Discover thousands of games for Xbox and PC</p>
+        </div>
+      </section>
+
+      <section class="catalog-content">
+        <div class="container">
+          <div class="catalog-layout">
+            <!-- Filters Sidebar -->
+            <aside class="filters-sidebar">
+              <div class="filter-section">
+                <h3>Search</h3>
+                <div class="search-box">
+                  <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search games..."
+                  />
+                  <button type="button" id="search-btn">🔍</button>
+                </div>
+              </div>
+
+              <div class="filter-section">
+                <h3>Platform</h3>
+                <div class="filter-options">
+                  <label class="filter-option">
+                    <input type="checkbox" value="xbox" checked />
+                    <span class="checkmark"></span>
+                    Xbox Series X|S
+                  </label>
+                  <label class="filter-option">
+                    <input type="checkbox" value="pc" checked />
+                    <span class="checkmark"></span>
+                    PC
+                  </label>
+                </div>
+              </div>
+
+              <div class="filter-section">
+                <h3>Genre</h3>
+                <div class="filter-options" id="genre-filters">
+                  <!-- Genres will be loaded dynamically -->
+                </div>
+              </div>
+
+              <div class="filter-section">
+                <h3>Price Range</h3>
+                <div class="price-range">
+                  <input
+                    type="range"
+                    id="price-slider"
+                    min="0"
+                    max="150"
+                    value="150"
+                  />
+                  <div class="price-labels">
+                    <span>$0</span>
+                    <span id="price-value">$150</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="filter-section">
+                <h3>Rating</h3>
+                <div class="filter-options">
+                  <label class="filter-option">
+                    <input type="checkbox" value="4.5" />
+                    <span class="checkmark"></span>
+                    ⭐⭐⭐⭐⭐ 4.5+
+                  </label>
+                  <label class="filter-option">
+                    <input type="checkbox" value="4.0" />
+                    <span class="checkmark"></span>
+                    ⭐⭐⭐⭐ 4.0+
+                  </label>
+                  <label class="filter-option">
+                    <input type="checkbox" value="3.5" />
+                    <span class="checkmark"></span>
+                    ⭐⭐⭐ 3.5+
+                  </label>
+                </div>
+              </div>
+
+              <button class="btn btn-primary" id="clear-filters">
+                Clear All Filters
+              </button>
+            </aside>
+
+            <!-- Games Grid -->
+            <div class="games-content">
+              <div class="catalog-header">
+                <div class="results-info">
+                  <span id="results-count">0</span> games found
+                </div>
+                <div class="sort-controls">
+                  <label for="sort-select">Sort by:</label>
+                  <select id="sort-select">
+                    <option value="name">Name A-Z</option>
+                    <option value="name-desc">Name Z-A</option>
+                    <option value="price">Price Low to High</option>
+                    <option value="price-desc">Price High to Low</option>
+                    <option value="rating">Rating High to Low</option>
+                    <option value="newest">Newest First</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="games-grid" id="catalog-games-grid">
+                <!-- Games will be loaded dynamically -->
+              </div>
+
+              <div class="pagination" id="pagination">
+                <!-- Pagination will be generated dynamically -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast"></div>
+
+    <script src="js/common.js"></script>
+    <script src="js/catalog.js"></script>
+  </body>
+</html>

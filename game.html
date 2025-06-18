@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Details - GameStore</title>
+    <meta
+      name="description"
+      content="Detailed game information, reviews, and purchase options"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/game.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main>
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="./">Home</a> › <a href="catalog.html">Catalog</a> ›
+          <span id="game-title">Game</span>
+        </div>
+
+        <div class="game-details" id="game-details">
+          <!-- Game details will be loaded dynamically -->
+        </div>
+
+        <div class="game-tabs">
+          <div class="tab-buttons">
+            <button class="tab-btn active" data-tab="description">
+              Description
+            </button>
+            <button class="tab-btn" data-tab="specifications">
+              Specifications
+            </button>
+            <button class="tab-btn" data-tab="reviews">Reviews</button>
+          </div>
+
+          <div class="tab-content">
+            <div class="tab-panel active" id="description-tab">
+              <div class="game-description" id="game-description">
+                <!-- Description will be loaded dynamically -->
+              </div>
+            </div>
+
+            <div class="tab-panel" id="specifications-tab">
+              <div class="game-specifications" id="game-specifications">
+                <!-- Specifications will be loaded dynamically -->
+              </div>
+            </div>
+
+            <div class="tab-panel" id="reviews-tab">
+              <div class="reviews-section">
+                <div class="reviews-header">
+                  <h3>Customer Reviews</h3>
+                  <div class="reviews-summary" id="reviews-summary">
+                    <!-- Reviews summary will be loaded dynamically -->
+                  </div>
+                </div>
+
+                <div class="review-form">
+                  <h4>Write a Review</h4>
+                  <form id="review-form">
+                    <div class="rating-input">
+                      <label>Rating:</label>
+                      <div class="stars">
+                        <input
+                          type="radio"
+                          name="rating"
+                          value="5"
+                          id="star5"
+                        />
+                        <label for="star5">★</label>
+                        <input
+                          type="radio"
+                          name="rating"
+                          value="4"
+                          id="star4"
+                        />
+                        <label for="star4">★</label>
+                        <input
+                          type="radio"
+                          name="rating"
+                          value="3"
+                          id="star3"
+                        />
+                        <label for="star3">★</label>
+                        <input
+                          type="radio"
+                          name="rating"
+                          value="2"
+                          id="star2"
+                        />
+                        <label for="star2">★</label>
+                        <input
+                          type="radio"
+                          name="rating"
+                          value="1"
+                          id="star1"
+                        />
+                        <label for="star1">★</label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="review-title">Title:</label>
+                      <input
+                        type="text"
+                        id="review-title"
+                        name="title"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="review-text">Review:</label>
+                      <textarea
+                        id="review-text"
+                        name="text"
+                        rows="5"
+                        required
+                      ></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                      Submit Review
+                    </button>
+                  </form>
+                </div>
+
+                <div class="reviews-list" id="reviews-list">
+                  <!-- Reviews will be loaded dynamically -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="related-games">
+          <h3>You Might Also Like</h3>
+          <div class="games-grid" id="related-games-grid">
+            <!-- Related games will be loaded dynamically -->
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast"></div>
+
+    <script src="js/common.js"></script>
+    <script src="js/game.js"></script>
+  </body>
+</html>

@@ -1,0 +1,235 @@
+[
+  {
+    "gameId": "1",
+    "reviews": [
+      {
+        "id": "r1",
+        "author": "Alex",
+        "rating": 5,
+        "title": "Masterpiece!",
+        "text": "Halo Infinite brings back the classic Halo feel with modern graphics. Multiplayer is super fun!",
+        "date": "2024-05-01"
+      },
+      {
+        "id": "r2",
+        "author": "Sam",
+        "rating": 4,
+        "title": "Great but needs more maps",
+        "text": "Campaign is amazing, but I wish there were more multiplayer maps at launch.",
+        "date": "2024-05-03"
+      }
+    ]
+  },
+  {
+    "gameId": "2",
+    "reviews": [
+      {
+        "id": "r3",
+        "author": "Jess",
+        "rating": 5,
+        "title": "Best racing game ever!",
+        "text": "Forza Horizon 5 is visually stunning and the car selection is top notch.",
+        "date": "2024-05-02"
+      },
+      {
+        "id": "r4",
+        "author": "Mike",
+        "rating": 5,
+        "title": "Absolutely incredible",
+        "text": "The graphics, the sound, the gameplay - everything is perfect. Mexico looks amazing!",
+        "date": "2024-05-04"
+      }
+    ]
+  },
+  {
+    "gameId": "3",
+    "reviews": [
+      {
+        "id": "r5",
+        "author": "Chris",
+        "rating": 4,
+        "title": "Immersive world",
+        "text": "Cyberpunk 2077 has improved a lot since launch. The story and world are fantastic.",
+        "date": "2024-05-04"
+      },
+      {
+        "id": "r6",
+        "author": "Sarah",
+        "rating": 3,
+        "title": "Good but buggy",
+        "text": "The game is fun but still has some technical issues on PC.",
+        "date": "2024-05-05"
+      }
+    ]
+  },
+  {
+    "gameId": "4",
+    "reviews": [
+      {
+        "id": "r7",
+        "author": "David",
+        "rating": 5,
+        "title": "A masterpiece of storytelling",
+        "text": "Red Dead Redemption 2 is one of the best games I've ever played. The story is incredible.",
+        "date": "2024-05-06"
+      },
+      {
+        "id": "r8",
+        "author": "Emma",
+        "rating": 5,
+        "title": "Beautiful and immersive",
+        "text": "The attention to detail is amazing. This game sets a new standard for open-world games.",
+        "date": "2024-05-07"
+      }
+    ]
+  },
+  {
+    "gameId": "5",
+    "reviews": [
+      {
+        "id": "r9",
+        "author": "Tom",
+        "rating": 5,
+        "title": "Epic fantasy adventure",
+        "text": "The Witcher 3 is a masterpiece. The story, characters, and world are all incredible.",
+        "date": "2024-05-08"
+      },
+      {
+        "id": "r10",
+        "author": "Lisa",
+        "rating": 4,
+        "title": "Amazing RPG",
+        "text": "Great story and characters, though the combat could be better.",
+        "date": "2024-05-09"
+      }
+    ]
+  },
+  {
+    "gameId": "6",
+    "reviews": [
+      {
+        "id": "r11",
+        "author": "John",
+        "rating": 4,
+        "title": "Solid football game",
+        "text": "FIFA 24 is a good improvement over previous versions. Gameplay feels more realistic.",
+        "date": "2024-05-10"
+      }
+    ]
+  },
+  {
+    "gameId": "7",
+    "reviews": [
+      {
+        "id": "r12",
+        "author": "Mark",
+        "rating": 4,
+        "title": "Intense action",
+        "text": "Call of Duty MW3 delivers on the action. Campaign is short but sweet.",
+        "date": "2024-05-11"
+      }
+    ]
+  },
+  {
+    "gameId": "8",
+    "reviews": [
+      {
+        "id": "r13",
+        "author": "Anna",
+        "rating": 5,
+        "title": "Timeless classic",
+        "text": "Minecraft is still as fun as ever. Perfect for creativity and relaxation.",
+        "date": "2024-05-12"
+      },
+      {
+        "id": "r14",
+        "author": "Ben",
+        "rating": 5,
+        "title": "Endless possibilities",
+        "text": "There's nothing quite like Minecraft. The freedom to create is amazing.",
+        "date": "2024-05-13"
+      }
+    ]
+  },
+  {
+    "gameId": "9",
+    "reviews": [
+      {
+        "id": "r15",
+        "author": "Ryan",
+        "rating": 4,
+        "title": "Great open world",
+        "text": "GTA V still holds up well. The world is massive and there's so much to do.",
+        "date": "2024-05-14"
+      }
+    ]
+  },
+  {
+    "gameId": "10",
+    "reviews": [
+      {
+        "id": "r16",
+        "author": "Kate",
+        "rating": 4,
+        "title": "Viking adventure",
+        "text": "Assassin's Creed Valhalla is a great Viking-themed adventure. Combat is satisfying.",
+        "date": "2024-05-15"
+      }
+    ]
+  },
+  {
+    "gameId": "11",
+    "reviews": [
+      {
+        "id": "r17",
+        "author": "Paul",
+        "rating": 5,
+        "title": "Epic fantasy RPG",
+        "text": "Skyrim is still one of the best RPGs ever made. The modding community keeps it fresh.",
+        "date": "2024-05-16"
+      },
+      {
+        "id": "r18",
+        "author": "Rachel",
+        "rating": 4,
+        "title": "Amazing world",
+        "text": "The world of Skyrim is incredible. So much to explore and discover.",
+        "date": "2024-05-17"
+      }
+    ]
+  },
+  {
+    "gameId": "12",
+    "reviews": [
+      {
+        "id": "r19",
+        "author": "Steve",
+        "rating": 4,
+        "title": "Post-apocalyptic adventure",
+        "text": "Fallout 4 is a great RPG with an interesting world and story.",
+        "date": "2024-05-18"
+      }
+    ]
+  },
+  {
+    "gameId": "13",
+    "reviews": [
+      {
+        "id": "r20",
+        "author": "Marcus",
+        "rating": 5,
+        "title": "Epic Norse adventure",
+        "text": "God of War Ragnarök is a masterpiece. The story, combat, and world design are all incredible.",
+        "date": "2024-05-19"
+      },
+      {
+        "id": "r21",
+        "author": "Sophie",
+        "rating": 5,
+        "title": "Emotional and powerful",
+        "text": "The relationship between Kratos and Atreus is beautifully portrayed. One of the best games ever made.",
+        "date": "2024-05-20"
+      }
+    ]
+  }
+]

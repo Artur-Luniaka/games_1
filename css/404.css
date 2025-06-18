@@ -1,0 +1,43 @@
+/* 404 Page Styles */
+.error-content {
+  text-align: center;
+  padding: var(--spacing-2xl) 0;
+}
+
+.error-icon {
+  font-size: 5rem;
+  margin-bottom: var(--spacing-lg);
+  opacity: 0.7;
+}
+
+.error-content h1 {
+  font-size: 6rem;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.error-content h2 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.error-content p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xl);
+}
+
+.error-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+  .error-content h1 {
+    font-size: 4rem;
+  }
+  .error-actions {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+}
