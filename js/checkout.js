@@ -70,6 +70,9 @@ function handleCheckout(e) {
   );
   localStorage.removeItem("cart");
 
+  // Scroll to top of the page
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
   // Show success notification with countdown
   showSuccessNotification();
 }
